@@ -29,7 +29,8 @@ kotlin {
     }
     
     jvm("desktop")
-    
+
+
     sourceSets {
         val desktopMain by getting
         
@@ -51,6 +52,7 @@ kotlin {
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
+            implementation(libs.androidx.collection)
         }
     }
 }
