@@ -30,7 +30,6 @@ kotlin {
     
     jvm("desktop")
 
-
     sourceSets {
         val desktopMain by getting
         
@@ -49,9 +48,8 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(projects.shared)
         }
-        desktopMain.dependencies {
+        desktopMain.dependencies{
             implementation(compose.desktop.currentOs)
-            implementation(libs.kotlinx.coroutines.swing)
             implementation(libs.androidx.collection)
         }
     }
@@ -91,7 +89,6 @@ dependencies {
 compose.desktop {
     application {
         mainClass = "org.example.project.MainKt"
-
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "org.example.project"

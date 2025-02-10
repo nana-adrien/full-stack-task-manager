@@ -1,8 +1,8 @@
 [versions]
 agp = "8.7.3"
-android-compileSdk = "34"
-android-minSdk = "24"
-android-targetSdk = "34"
+android-compileSdk = "35"
+android-minSdk = "26"
+android-targetSdk = "35"
 androidx-activityCompose = "1.10.0"
 androidx-appcompat = "1.7.0"
 androidx-constraintlayout = "2.2.0"
@@ -13,14 +13,18 @@ androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
 collection = "1.4.5"
 compose-multiplatform = "1.7.0"
+desktop = "1.7.0"
 junit = "4.13.2"
 kotlin = "2.1.0"
 kotlinx-coroutines = "1.10.1"
 ktor = "3.0.3"
 logback = "1.5.16"
+skikoAwt = "0.8.15"
+skikoAwtRuntime = "0.6.0"
 
 [libraries]
 androidx-collection = { module = "androidx.collection:collection", version.ref = "collection" }
+desktop = { module = "org.jetbrains.compose.desktop:desktop", version.ref = "desktop" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -38,6 +42,8 @@ logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 ktor-server-core = { module = "io.ktor:ktor-server-core-jvm", version.ref = "ktor" }
 ktor-server-netty = { module = "io.ktor:ktor-server-netty-jvm", version.ref = "ktor" }
 ktor-server-tests = { module = "io.ktor:ktor-server-tests-jvm", version.ref = "ktor" }
+skiko-awt = { module = "org.jetbrains.skiko:skiko-awt", version.ref = "skikoAwt" }
+skiko-awt-runtime = { module = "org.jetbrains.skiko:skiko-awt-runtime", version.ref = "skikoAwtRuntime" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
