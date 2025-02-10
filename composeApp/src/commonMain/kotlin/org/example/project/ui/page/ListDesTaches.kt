@@ -8,7 +8,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
-import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TextFieldDefaults
@@ -27,9 +26,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import kotlinx.coroutines.launch
-import org.example.project.TaskCard
+import org.example.project.ui.components.TaskCard
 import org.example.project.UpdateTaskDialog
-import org.example.project.domain.ajouter_une_tache.AjoutDUneTacheEvent
 import org.example.project.modele.Task
 import org.example.project.reseau.TaskApi
 import org.example.project.reseau.createHttpClient

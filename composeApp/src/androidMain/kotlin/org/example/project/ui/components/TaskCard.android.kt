@@ -1,4 +1,4 @@
-package org.example.project
+package org.example.project.ui.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -13,24 +13,16 @@ import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.example.project.enums.TaskPriorityEnum
 import org.example.project.modele.Task
 
 @Composable
-fun TaskCard(
+actual fun TaskCard(
     task: Task,
     onDeleted: (Task) -> Unit,
-    onUpdated: (Task) -> Unit,
-) {
-    fun pickWeight(priority: TaskPriorityEnum)=when(priority){
-        TaskPriorityEnum.LOW->FontWeight.SemiBold
-        TaskPriorityEnum.MEDIUM->FontWeight.Bold
-        TaskPriorityEnum.HIGH,TaskPriorityEnum.VITAL->FontWeight.ExtraBold
-    }
-
+    onUpdated: (Task) -> Unit
+){
     Card(
         modifier = Modifier.fillMaxWidth().padding(8.dp),
         shape = RoundedCornerShape(CornerSize(8.dp)),
