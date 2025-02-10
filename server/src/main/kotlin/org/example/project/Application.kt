@@ -10,12 +10,13 @@ import io.ktor.server.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.server.request.receive
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import org.example.project.costant.shared.HttpConstant
 import org.example.project.enums.TaskPriorityEnum
 import org.example.project.modele.InMemoryTaskRepository
 import org.example.project.modele.Task
 
 fun main() {
-    embeddedServer(Netty, port = SERVER_PORT, host = "0.0.0.0", module = Application::module)
+    embeddedServer(Netty, port = HttpConstant.basePort, host = HttpConstant.baseUrl , module = Application::module)
         .start(wait = true)
 }
 
