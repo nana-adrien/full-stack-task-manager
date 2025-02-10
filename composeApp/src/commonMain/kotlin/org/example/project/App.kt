@@ -29,6 +29,7 @@ import org.example.project.modele.Task
 import org.example.project.reseau.TaskApi
 import org.example.project.reseau.createHttpClient
 import org.example.project.ui.page.ListDesTaches
+import org.example.project.ui.page.base.Navigation
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -36,7 +37,6 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Preview
 fun App() {
     MaterialTheme {
-
-        ListDesTaches()
+        Navigation()
     }
 }

@@ -36,8 +36,7 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
-
-
+            implementation(libs.kotlinx.coroutines.android)
             implementation(libs.ktor.client.android)
         }
         commonMain.dependencies {
@@ -50,7 +49,7 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(projects.shared)
-
+            implementation(libs.kotlinx.coroutines.core)
 
             //navigation
             implementation(libs.navigation.compose)
@@ -65,7 +64,7 @@ kotlin {
         desktopMain.dependencies{
             implementation(compose.desktop.currentOs)
             implementation(libs.androidx.collection)
-
+            implementation(libs.kotlinx.coroutines.javafx)
             implementation(libs.ktor.client.cio)
         }
 
@@ -104,6 +103,7 @@ android {
 
 dependencies {
     implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.navigation.compose)
     debugImplementation(compose.uiTooling)
 }
 
