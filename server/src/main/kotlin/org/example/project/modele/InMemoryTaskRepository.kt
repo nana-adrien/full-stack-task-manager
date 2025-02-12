@@ -5,7 +5,7 @@ import org.example.project.enums.TaskPriorityEnum
 class InMemoryTaskRepository:TaskRepository {
 
     private var tasks = listOf(
-        Task("Cleaning", "Clean the house", TaskPriorityEnum.LOW),
+        Task("Cleaning", "Clean the house", TaskPriorityEnum.LOW) ,
         Task("Gardening", "Mow the lawn", TaskPriorityEnum.MEDIUM),
         Task("Shopping", "Buy the groceries", TaskPriorityEnum.HIGH),
         Task("Painting", "Paint the fence", TaskPriorityEnum.LOW),
